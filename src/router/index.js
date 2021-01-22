@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Horloge from '@/views/Horloge.vue';
 import Formulaires from '@/views/Formulaires.vue';
-import CreerUnForm from '@/views/CreerUnForm.vue';
+
 import Crypto from '@/views/Crypto.vue';
 
 Vue.use(VueRouter);
@@ -18,11 +18,7 @@ const routes = [
 		name: 'formulaires',
 		component: Formulaires,
 	},
-	{
-		path: '/creer-un-form',
-		name: 'creer-un-form',
-		component: CreerUnForm,
-	},
+
 	{
 		path: '/crypto',
 		name: 'crypto',

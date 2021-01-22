@@ -1,13 +1,16 @@
 <template>
 	<div>
-		<h1>{{ title }}</h1>
 		<div id="app">
 			<div class="container">
 				<div class="card mt-5">
-					<h2 class="card-header ">Crypto Currency</h2>
+					<h2 class="card-header">
+						<strong> {{ title }}</strong>
+					</h2>
 
 					<div class="mt-3 mb-1 ">
-						<label for="crypto">Choose a crypto:</label>
+						<label class="mt-3 mb-4 mr-2" for="crypto"
+							>Choose a crypto:</label
+						>
 
 						<select v-model="selected" @change="search">
 							<option value="" selected disabled hidden
@@ -22,13 +25,15 @@
 								<th>Symbol</th>
 								<th>Name</th>
 								<th>current price</th>
-								<th>price change 24</th>
+								<th>Total volume</th>
+								<th>price change percentage 24h</th>
 							</thead>
 							<tbody>
 								<tr>
 									<td>{{ cryptosFind.symbol }}</td>
 									<td>{{ cryptosFind.name }}</td>
 									<td>{{ cryptosFind.current_price }}</td>
+									<td>{{ cryptosFind.total_volume }}</td>
 									<td :style="{ color: couleur }">
 										{{ cryptosFind.price_change_percentage_24h }}
 									</td>
@@ -41,21 +46,19 @@
 					<p>showing {{ num }}</p>
 					<table class="table">
 						<thead>
-							<th>No.</th>
-
 							<th>Symbol</th>
 							<th>Name</th>
-							<th>current price</th>
-							<th>price change 24</th>
+							<th>Current price</th>
+							<th>Total volume</th>
+							<th>price change percentage 24h</th>
 							<th>Remove</th>
 						</thead>
 						<tbody>
 							<tr v-for="(a, index) in cryptos" :key="index">
-								<td>{{ index + 1 }}</td>
-
 								<td>{{ a.symbol }}</td>
 								<td>{{ a.name }}</td>
 								<td>{{ a.current_price }}</td>
+								<td>{{ a.total_volume }}</td>
 								<td
 									:style="{
 										color:

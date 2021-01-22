@@ -72,7 +72,7 @@ export default {
 }
 
 #app {
-	background-color: #13141686;
+	background-color: #1314162c;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -164,6 +164,6 @@ export default {
 .zone {
 	margin-top: 40px;
 	margin-left: 20px;
-	color: #1b1b1b;
+	color: #1b1b1b8a;
 }
 </style>
